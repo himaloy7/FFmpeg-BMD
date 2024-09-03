@@ -60,8 +60,7 @@ PRELOADED_FORMATS = [
 
 # Following portions of the code yet to be tested
 
-"""
-
+'''
 # Load pre-trained model from TensorFlow Hub 
 model_url = 'https://tfhub.dev/google/edsr/1'
 model = hub.KerasLayer(model_url)
@@ -88,8 +87,8 @@ def enhance_frame(frame):
     preprocessed_frame = preprocess_frame(frame)
     enhanced_frame = model(preprocessed_frame)
     return postprocess_frame(enhanced_frame)
+'''
 
-"""
 
 
 
