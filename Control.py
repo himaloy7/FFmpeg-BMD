@@ -58,7 +58,7 @@ PRELOADED_FORMATS = [
 
 
 
-# Following portions of the code yet to be tested
+# Following portions of the code is a draft
 
 '''
 # Load pre-trained model from TensorFlow Hub 
@@ -100,7 +100,7 @@ def enhance_frame(frame):
 @app.route('/logs_data')
 def logs_data():
     try:
-        log_file_path = '/home/rf/Desktop/flask_app.log'  # Adjust the path as needed
+        log_file_path = '/home/rf/Desktop/flask_app.log'  
         with open(log_file_path, 'r') as file:
             logs = file.readlines()
     except Exception as e:
@@ -109,7 +109,7 @@ def logs_data():
     # Return logs as JSON
     return {'logs': logs}
 
-# Function to execute the ffmpeg command to get the list of available DeckLink devices installed in the server machine
+# Function to execute the ffmpeg command to get the list of available DeckLink devices (From Blackmagic Design) installed on the server machine
 def get_decklink_devices():
     try:
         logging.info("Executing ffmpeg to list DeckLink devices")
@@ -220,7 +220,7 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'admin' and password == 'password':  
+        if username == 'admin' and password == '****':  
             session['logged_in'] = True
             return redirect('/control')
         else:
