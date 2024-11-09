@@ -357,7 +357,7 @@ def control():
         }
 
         function updateVideoSources() {
-            // Example stream URLs; replace these with actual stream URLs
+            // Example stream URLs; 
             const streamUrls = [
                 ****[To be assigned dynamically]
 	            	****
